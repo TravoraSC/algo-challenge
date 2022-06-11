@@ -6,8 +6,19 @@ E.g reverseString('algorithms') // should return 'smhtirogla'
 
 
 function longestWord(text) {
-    // Code goes here
+    let newText = text.split(' ')
+    let arr = []
+    for(let i = 0; i < newText.length ; i++) {
+        let num = newText[i].length
+        arr.push(num)
+    }
+    let long = Math.max(...arr)
+    return newText[arr.indexOf(long)]
+    
 }
 
-
+// p - text string
+//returns longest word
+// 'hi bye sigh' - return 'sigh'
+// p - 
 module.exports = longestWord

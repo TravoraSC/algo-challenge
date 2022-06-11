@@ -8,9 +8,26 @@ return the equivalent of the sentence when capitalised. E.g
 
 
 function capSentence(text) {
-   // Code goes here
+  let wordsArray = text.toLowerCase().split(' ')
+  let capsArray = []
+
+  wordsArray.forEach(word => {
+      capsArray.push(word[0].toUpperCase() + word.slice(1))
+  });
+
+  return capsArray.join(' ')
 }
 
 
 
 module.exports = capSentence
+
+//parameter - the STRING text
+
+//Return - the STRING with each word capitalized
+
+//Example - "hey man" --> "Hey Man"
+
+//Pseudocode - split string by each word - .split() and .join()
+//            -capitalize first letter of each word
+//           - rejoin
